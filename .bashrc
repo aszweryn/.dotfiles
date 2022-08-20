@@ -26,8 +26,11 @@ fi
 
 unset rc
 
-### Custom configurations
+### Custom aliases 
 alias la="ls -A"
-alias ref="source ~/.dotfiles/bash/.bashrc"
+alias ref="source ~/.dotfiles/.bashrc"
 ###
 
+### Custom scritps
+source ~/Programming/GitHub/audio-toolbox/audiotoolbox.sh
+###
