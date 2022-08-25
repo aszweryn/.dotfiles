@@ -31,6 +31,7 @@ alias la="ls -A"
 alias ref="source ~/.dotfiles/.bashrc"
 alias xo="xdg-open"
 alias vi="nvim"
+alias xc="xclip -selection clipboard"
 ###
 
 ### Custom scritps
