@@ -30,7 +30,7 @@ unset rc
 alias la="ls -A"
 alias ref="source ~/.dotfiles/.bashrc"
 alias xo="xdg-open"
-alias vi="nvim"
+alias vi="nvim"; alias vim="nvim"
 alias xc="xclip -selection clipboard"
 ###
 
@@ -44,7 +44,7 @@ source <(kubectl completion bash)
 
 ### Enable tmux on terminal startup
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+tmux attach || tmux
 fi
 ###
 

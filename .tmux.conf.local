@@ -434,6 +434,7 @@ set -g @continuum-restore 'on'
 # if run as "tmux attach", create a session if one does not already exists
 new-session -n $HOST
 
+set -g @continuum-save-interval '15'
 
 # -- custom shortcuts ------------------------------------------------------------
 bind -n M-h select-pane -L
