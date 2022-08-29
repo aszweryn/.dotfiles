@@ -30,7 +30,7 @@ unset rc
 alias la="ls -A"
 alias ref="source ~/.dotfiles/.bashrc"
 alias xo="xdg-open"
-alias vi="nvim"; alias vim="nvim"
+alias vi="nvim"; alias vim="nvim"; alias v="nvim"
 alias xc="xclip -selection clipboard"
 ###
 
