@@ -4,7 +4,10 @@
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
 ### CHANGES MADE
-# 352 - PREFIX CHANGE
+# 354 - Prefix change
+# 401 - Enabling plugins
+# 440 - Refreshment rate - 15 min
+# 442 - Custom pane navigation
 
 # -- navigation ----------------------------------------------------------------
 

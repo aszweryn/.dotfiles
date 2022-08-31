@@ -28,6 +28,7 @@ unset rc
 
 ### Custom aliases 
 alias la="ls -A"
+alias ll="ls -lAh"
 alias ref="source ~/.dotfiles/.bashrc"
 alias xo="xdg-open"
 alias vi="nvim"; alias vim="nvim"; alias v="nvim"
