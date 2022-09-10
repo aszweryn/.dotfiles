@@ -4,10 +4,11 @@
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
 ### CHANGES MADE
-# 354 - Prefix change
-# 401 - Enabling plugins
-# 440 - Refreshment rate - 15 min
-# 442 - Custom pane navigation
+# 348 - Mouse mode enabled
+# 355 - Prefix change
+# 402 - Enabling plugins
+# 441 - Refreshment rate - 15 min
+# 443 - Custom pane navigation
 
 # -- navigation ----------------------------------------------------------------
 
@@ -344,7 +345,7 @@ tmux_conf_copy_to_os_clipboard=true
 #set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
