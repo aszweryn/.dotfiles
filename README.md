@@ -1,2 +1,2 @@
 # .dotfiles
-configs and whatnots
+### A personal terminal workflow configuration
