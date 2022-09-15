@@ -49,3 +49,5 @@ tmux attach || tmux
 fi
 ###
 
+export TERM="rxvt-unicode-256color"
+
