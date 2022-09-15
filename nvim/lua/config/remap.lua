@@ -1,3 +1,6 @@
 local nnoremap = require("config.keymap").nnoremap
 
-nnoremap("<leader>pv", "<cmd>Ex<CR>")
+-- Nvim-tree
+nnoremap("<leader>nt", "<cmd>NvimTreeToggle<CR>")
+nnoremap("<leader>nf", "<cmd>NvimTreeFocus<CR>")
+
