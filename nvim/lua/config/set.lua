@@ -22,3 +22,4 @@ set.wrap = false
 
 vim.g.mapleader = " "
 
+set.laststatus = 3
