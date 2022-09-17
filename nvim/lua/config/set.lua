@@ -1,6 +1,6 @@
 local set = vim.opt
 
-vim.opt.guicursor = ""
+set.guicursor = ""
 
 set.nu = true
 set.relativenumber = true
@@ -23,3 +23,4 @@ set.wrap = false
 vim.g.mapleader = " "
 
 set.laststatus = 3
+

@@ -33,6 +33,7 @@ alias ref="source ~/.dotfiles/.bashrc"
 alias xo="xdg-open"
 alias vi="nvim"; alias vim="nvim"; alias v="nvim"
 alias xc="xclip -selection clipboard"
+alias vs="rm ~/.local/share/nvim/swap/*"
 ###
 
 ### Custom scritps

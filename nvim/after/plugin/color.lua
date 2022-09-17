@@ -1,3 +1,5 @@
+-- Current setting on the bottom of the file, for the config to be applied --
+
 require("tokyonight").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings
@@ -34,7 +36,6 @@ require("tokyonight").setup({
   on_highlights = function(highlights, colors) end,
 })
 
-vim.cmd("colorscheme tokyonight")
 
 require('onedark').setup({
     -- Main options --
@@ -71,7 +72,6 @@ require('onedark').setup({
     },
 })
 
---vim.cmd("colorscheme onedark")
 
 require('nightfox').setup({
   options = {
@@ -107,5 +107,6 @@ require('nightfox').setup({
   groups = {},
 })
 
--- setup must be called before loading
---vim.cmd("colorscheme nightfox")
+--- CURRENT THEME ---
+vim.cmd("colorscheme tokyonight")
+

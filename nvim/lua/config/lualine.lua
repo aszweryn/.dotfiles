@@ -39,7 +39,7 @@ require('lualine').setup({
   inactive_winbar = {},
   extensions = {
     'nvim-tree',
-    'Packer',
+    --'Packer',
   }
 })
 
