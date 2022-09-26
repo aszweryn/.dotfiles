@@ -408,8 +408,8 @@ set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'tmux-plugins/tmux-cpu'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @continuum-restore 'on'
 set -g @plugin 'sainnhe/tmux-fzf'
+set -g @plugin "janoamaral/tokyo-night-tmux"
 
 
 # -- custom variables ----------------------------------------------------------
@@ -440,17 +440,18 @@ set -g @plugin 'sainnhe/tmux-fzf'
 # # /!\ do not remove the previous line
 
 # if run as "tmux attach", create a session if one does not already exists
+set-window-option -g mode-keys vi
+
 new-session -n $HOST
 
-set -g @continuum-save-interval '15'
+set -g @continuum-restore 'on'
+set -g @continuum-save-interval '30'
 
-set-window-option -g mode-keys vi
+TMUX_FZF_ORDER="pane|session|window|command|keybinding|clipboard|process"
 
 # -- custom binds ------------------------------------------------------------
 bind -n M-h select-pane -L
 bind -n M-j select-pane -D
 bind -n M-k select-pane -U
 bind -n M-l select-pane -R
-
-TMUX_FZF_ORDER="pane|session|window|command|keybinding|clipboard|process"
 

@@ -34,6 +34,7 @@ alias xo="xdg-open"
 alias vi="nvim"; alias vim="nvim"; alias v="nvim"
 alias xc="xclip -selection clipboard"
 alias vs="rm ~/.local/share/nvim/swap/*"
+alias pycharm="~/.local/share/Pycharm/pycharm-edu-2022.2/bin/pycharm.sh &"
 ###
 
 ### Custom scritps
