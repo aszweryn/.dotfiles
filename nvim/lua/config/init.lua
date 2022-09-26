@@ -5,4 +5,5 @@ require("config.treesitter")
 require("config.nvim-tree")
 require("config.lualine")
 require("config.telescope")
+require("config.lspconfig")
 
