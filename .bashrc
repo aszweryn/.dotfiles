@@ -38,7 +38,7 @@ alias pycharm="~/.local/share/Pycharm/pycharm-edu-2022.2/bin/pycharm.sh &"
 ###
 
 ### Custom scritps
-source ~/Programming/GitHub/audio-toolbox/audiotoolbox.sh
+source ~/Projects/GitHub/audio-toolbox/audiotoolbox.sh
 ###
 
 ### Kubernetes autocompletion

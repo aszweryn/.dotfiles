@@ -2,3 +2,6 @@
 	name = aszweryn
 	email = 101809061+aszweryn@users.noreply.github.com
 
+[core]
+	editor = nvim
+
