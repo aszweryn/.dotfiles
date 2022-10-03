@@ -1,6 +1,6 @@
 [user]
 	name = aszweryn
-	email = 101809061+aszweryn@users.noreply.github.com
+	email = {ID}+{username}@users.noreply.github.com
 
 [core]
 	editor = nvim
