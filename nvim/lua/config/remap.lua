@@ -4,7 +4,7 @@ local nnoremap = require("config.keymap").nnoremap
 nnoremap("<leader>ps", "<cmd>PackerSync<CR>")
 
 -- Nvim-tree
-nnoremap("<leader>nt", "<cmd>NvimTreeToggle nosplitright<CR>")
+nnoremap("<leader>nt", "<cmd>NvimTreeToggle<CR>")
 nnoremap("<leader>nf", "<cmd>NvimTreeFocus<CR>")
 
 -- Telescope

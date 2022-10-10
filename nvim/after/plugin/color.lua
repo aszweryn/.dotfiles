@@ -3,8 +3,8 @@
 require("tokyonight").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings
-  style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
-  transparent = true, -- Enable this to disable setting the background color
+  style = "night", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+  transparent = false, -- Enable this to disable setting the background color
   transparent_statusbar = false, -- Enable this to disable setting the statusbar color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
@@ -37,10 +37,10 @@ require("tokyonight").setup({
 })
 
 
-require('onedark').setup({
+require('onedark').setup  {
     -- Main options --
-    style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-    transparent = true,  -- Show/hide background
+    style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+    transparent = false,  -- Show/hide background
     term_colors = true, -- Change terminal color as per the selected theme style
     ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
     cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
@@ -60,6 +60,11 @@ require('onedark').setup({
         variables = 'none'
     },
 
+    -- Lualine options --
+    lualine = {
+        transparent = false, -- lualine center bar transparency
+    },
+
     -- Custom Highlights --
     colors = {}, -- Override default colors
     highlights = {}, -- Override highlight groups
@@ -70,7 +75,7 @@ require('onedark').setup({
         undercurl = true,   -- use undercurl instead of underline for diagnostics
         background = true,    -- use background color for virtual text
     },
-})
+}
 
 
 require('nightfox').setup({
@@ -78,7 +83,7 @@ require('nightfox').setup({
     -- Compiled file's destination location
     compile_path = vim.fn.stdpath("cache") .. "/nightfox",
     compile_file_suffix = "_compiled", -- Compiled file suffix
-    transparent = true,    -- Disable setting background
+    transparent = false,    -- Disable setting background
     terminal_colors = true, -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
     dim_inactive = false,   -- Non focused panes set to alternative background
     styles = {              -- Style to be applied to different syntax groups
