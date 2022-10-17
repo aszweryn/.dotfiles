@@ -35,6 +35,7 @@ alias vi="nvim"; alias vim="nvim"
 alias xc="xclip -selection clipboard"
 alias vs="rm ~/.local/share/nvim/swap/*"
 alias pycharm="~/.local/share/Pycharm/pycharm-edu-2022.2/bin/pycharm.sh &"
+alias obsidian="~/.local/share/Obsidian/Obsidian-0.15.9.AppImage &"
 ###
 
 ### Custom scritps
@@ -52,4 +53,5 @@ fi
 ###
 
 export TERM="rxvt-unicode-256color"
+export EDITOR="nvim"
 

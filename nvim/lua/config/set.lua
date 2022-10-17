@@ -1,5 +1,4 @@
 local set = vim.opt
-
 set.guicursor = ""
 
 set.nu = true
@@ -23,4 +22,6 @@ set.wrap = false
 vim.g.mapleader = " "
 
 set.laststatus = 3
+
+vim.opt.listchars = { space = '_', tab = '>~' }
 
