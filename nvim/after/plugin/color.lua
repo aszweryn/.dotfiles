@@ -114,4 +114,6 @@ require('nightfox').setup({
 
 --- CURRENT THEME ---
 vim.cmd("colorscheme tokyonight")
+-- Dummy fix for bad coloring of spaces
+vim.cmd("colorscheme tokyonight")
 
