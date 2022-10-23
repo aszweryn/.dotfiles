@@ -40,6 +40,7 @@ alias obsidian="~/.local/share/Obsidian/Obsidian-0.15.9.AppImage &"
 
 ### Custom scritps
 source ~/Projects/GitHub/audio-toolbox/audiotoolbox.sh
+source ~/.dotfiles/bluetooth/bt.sh
 ###
 
 ### Kubernetes autocompletion
@@ -54,4 +55,5 @@ fi
 
 export TERM="rxvt-unicode-256color"
 export EDITOR="nvim"
+export SUDOEDIT="nvim"
 
