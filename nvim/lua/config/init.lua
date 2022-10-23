@@ -7,4 +7,4 @@ require("config.lualine")
 require("config.telescope")
 require("config.lspconfig")
 require("config.nvim-cmp")
-
+require("config.indent_blankline")

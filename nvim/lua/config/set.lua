@@ -4,7 +4,7 @@ set.guicursor = ""
 set.nu = true
 set.relativenumber = true
 
-set.expandtab = true
+--set.expandtab = true
 set.smarttab = true
 set.shiftwidth = 4
 set.tabstop = 4
@@ -23,5 +23,6 @@ vim.g.mapleader = " "
 
 set.laststatus = 3
 
-vim.opt.listchars = { space = '_', tab = '>~' }
-
+set.list = true
+set.listchars:append "space:⋅"
+set.listchars:append "eol:↴"
