@@ -53,6 +53,6 @@ tmux attach || tmux
 fi
 ###
 
-export TERM="rxvt-unicode-256color"
+export TERM="screen-256color"
 export EDITOR="nvim"
 export SUDOEDIT="nvim"
