@@ -53,7 +53,6 @@ require('lspconfig')['tsserver'].setup{
 require('lspconfig')['rust_analyzer'].setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
-	-- Server-specific settings...
 	settings = {
 	  ["rust-analyzer"] = {}
 	}
@@ -68,12 +67,13 @@ require('lspconfig')['yamlls'].setup {
 				server = "verbose",
 			},
 			schemas = {
-				kubernetes = "/*.yaml",
-				["https://raw.githubusercontent.com/quantumblacklabs/kedro/develop/static/jsonschema/kedro-catalog-0.17.json"]= "conf/**/*catalog*",
-				["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*"
-			},
-			schemaDownload = {  enable = true },
+				    result = {
+						name = "Kubernetes 1.22.4",
+						uri = "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.22.4-standalone-strict/all.json",
+					},
+			schemaDownload = { enable = true },
 			validate = true,
+			}
 		}
 	}
 }

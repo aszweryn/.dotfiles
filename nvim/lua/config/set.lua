@@ -22,6 +22,5 @@ vim.g.mapleader = " "
 
 set.laststatus = 3
 
-set.list = true
 set.listchars:append "space:⋅"
 set.listchars:append "eol:↴"

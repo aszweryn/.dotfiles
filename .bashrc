@@ -8,7 +8,7 @@ fi
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+	PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
@@ -56,4 +56,3 @@ fi
 export TERM="rxvt-unicode-256color"
 export EDITOR="nvim"
 export SUDOEDIT="nvim"
-
