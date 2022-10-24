@@ -1,5 +1,8 @@
 local nnoremap = require("config.keymap").nnoremap
 
+nnoremap("<leader>sl", "<cmd>set list<CR>")
+nnoremap("<leader>ls", "<cmd>set nolist<CR>")
+
 -- Packer
 nnoremap("<leader>ps", "<cmd>PackerSync<CR>")
 
