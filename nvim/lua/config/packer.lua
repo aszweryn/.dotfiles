@@ -30,4 +30,12 @@ return require('packer').startup(function(use)
 	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
 	use 'L3MON4D3/LuaSnip' -- Snippets plugin   use 'neovim/nvim-lspconfig'
 	use 'lukas-reineke/indent-blankline.nvim'
+	use {
+		"cuducos/yaml.nvim",
+		ft = {"yaml"}, -- optional
+		requires = {
+		  "nvim-treesitter/nvim-treesitter",
+		  "nvim-telescope/telescope.nvim" -- optional
+		},
+	}
 end)
