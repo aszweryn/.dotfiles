@@ -77,3 +77,8 @@ require('lspconfig')['yamlls'].setup {
 		}
 	}
 }
+
+
+require('lspconfig')['gopls'].setup {
+
+}
