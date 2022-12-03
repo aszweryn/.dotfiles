@@ -59,6 +59,9 @@ tmux attach || tmux
 fi
 ###
 
+### Smol tweaks
 export TERM="screen-256color"
 export EDITOR="nvim"
 export SUDOEDIT="nvim"
+export PROMPT_COMMAND="history -a; history -h"
+###
