@@ -63,5 +63,5 @@ fi
 export TERM="screen-256color"
 export EDITOR="nvim"
 export SUDOEDIT="nvim"
-export PROMPT_COMMAND="history -a; history -h"
+export PROMPT_COMMAND="history -a; history -n"
 ###

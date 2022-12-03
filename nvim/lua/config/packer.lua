@@ -34,8 +34,12 @@ return require('packer').startup(function(use)
 		"cuducos/yaml.nvim",
 		ft = {"yaml"}, -- optional
 		requires = {
-		  "nvim-treesitter/nvim-treesitter",
-		  "nvim-telescope/telescope.nvim" -- optional
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-telescope/telescope.nvim" -- optional
 		},
+	}
+	use {
+	"windwp/nvim-autopairs",
+	config = function() require("nvim-autopairs").setup {} end
 	}
 end)
