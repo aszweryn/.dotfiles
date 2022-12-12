@@ -1,5 +1,9 @@
 local nnoremap = require("config.keymap").nnoremap
 
+-- Ctrl-D and Ctrl-U with centering
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+
 -- Listchars toggle
 nnoremap("<leader>sl", "<cmd>set list!<CR>")
 
