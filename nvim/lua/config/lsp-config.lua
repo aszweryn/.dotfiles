@@ -1,6 +1,15 @@
-require("mason").setup()
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
+
 require("mason-lspconfig").setup({
-	ensure_installed = { "sumneko_lua" }
+	ensure_installed = { "sumneko_lua", "pyright", "gopls", "clangd" }
 })
 
 local on_attach = function(_, _)
@@ -14,5 +23,13 @@ local on_attach = function(_, _)
 end
 
 require("lspconfig").sumneko_lua.setup {
+	on_attach = on_attach
+}
+
+require("lspconfig").pyright.setup {
+	on_attach = on_attach
+}
+
+require("lspconfig").gopls.setup {
 	on_attach = on_attach
 }
