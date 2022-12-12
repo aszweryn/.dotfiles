@@ -24,11 +24,8 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
 	use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
 	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-	use 'L3MON4D3/LuaSnip' -- Snippets plugin   use 'neovim/nvim-lspconfig'
 	use 'lukas-reineke/indent-blankline.nvim'
 	use {
 		"cuducos/yaml.nvim",
@@ -41,5 +38,10 @@ return require('packer').startup(function(use)
 	use {
 	"windwp/nvim-autopairs",
 	config = function() require("nvim-autopairs").setup {} end
+	}
+	use {
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
 	}
 end)
