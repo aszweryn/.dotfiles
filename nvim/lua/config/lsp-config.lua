@@ -8,9 +8,14 @@ require("mason").setup({
     }
 })
 
+--> Required LSP's
 require("mason-lspconfig").setup({
-	ensure_installed = { "sumneko_lua", "pyright", "gopls", "clangd" }
+	ensure_installed = { "sumneko_lua", "pyright", "gopls"}
 })
+
+require("lspconfig").sumneko_lua.setup {
+	on_attach = on_attach
+}
 
 local on_attach = function(_, _)
 	vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
@@ -22,10 +27,6 @@ local on_attach = function(_, _)
 	vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 end
 
-require("lspconfig").sumneko_lua.setup {
-	on_attach = on_attach
-}
-
 require("lspconfig").pyright.setup {
 	on_attach = on_attach
 }
@@ -33,3 +34,4 @@ require("lspconfig").pyright.setup {
 require("lspconfig").gopls.setup {
 	on_attach = on_attach
 }
+
