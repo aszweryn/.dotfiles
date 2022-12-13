@@ -11,7 +11,6 @@ nnoremap("<leader>sl", "<cmd>set list!<CR>")
 nnoremap("<leader>ps", "<cmd>PackerSync<CR>")
 
 -- Nvim-tree
-nnoremap("<leader>nt", "<cmd>NvimTreeToggle<CR>")
 nnoremap("<leader>nf", "<cmd>NvimTreeFocus<CR>")
 
 -- Telescope
