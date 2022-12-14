@@ -1,6 +1,6 @@
 # .dotfiles
 
-### List of plugins:
+### List of Nvim plugins:
 - **Packer**
 - **Nvim-Treesitter**
 - **Nvim-Tree**
@@ -10,7 +10,7 @@
 - **Mason**
 - **Mason-lspconfig**
 - **Nvim-lspconfig**
-- **Coc.nvim**
+- **Coc.nvim:** *do not forget about coc-pairs!*
 - **Indent-blankline**
 - **Tokyonight.nvim**
 - **Nightfox.nvim**
