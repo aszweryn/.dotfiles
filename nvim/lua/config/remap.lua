@@ -5,10 +5,10 @@ nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
 -- Listchars toggle
-nnoremap("<leader>sl", "<cmd>set list!<CR>")
+nnoremap("<leader>lc", "<cmd>set list!<CR>")
 
 -- Packer
-nnoremap("<leader>ps", "<cmd>PackerSync<CR>")
+nnoremap("<leader>qq", "<cmd>PackerSync<CR>")
 
 -- Nvim-tree
 nnoremap("<leader>nf", "<cmd>NvimTreeFocus<CR>")
@@ -18,3 +18,4 @@ nnoremap ("<leader>ff", "<cmd>Telescope find_files hidden=true<cr>")
 nnoremap ("<leader>fg", "<cmd>Telescope live_grep hidden=true<cr>")
 nnoremap ("<leader>fb", "<cmd>Telescope buffers hidden=true<cr>")
 nnoremap ("<leader>fh", " <cmd>Telescope help_tags hidden=true<cr>")
+
