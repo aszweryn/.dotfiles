@@ -20,3 +20,5 @@ nnoremap ("<leader>fg", "<cmd>Telescope live_grep hidden=true<cr>")
 nnoremap ("<leader>fb", "<cmd>Telescope buffers hidden=true<cr>")
 nnoremap ("<leader>fh", " <cmd>Telescope help_tags hidden=true<cr>")
 
+-- Undotree 
+nnoremap ("<leader>ud", "<cmd>UndotreeToggle<cr>")

@@ -47,6 +47,9 @@ return require('packer').startup(function(use)
 		}
 	}
 
+	-- Changes history undo tree
+	use 'mbbill/undotree'
+
 	-- Pretty status bar
 	use {
 		'nvim-lualine/lualine.nvim',
