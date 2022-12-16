@@ -7,7 +7,6 @@ lsp.ensure_installed({
 	'sumneko_lua',
 	'tsserver',
 	'clangd',
-	'rust-analyzer',
 })
 
 lsp.setup()
