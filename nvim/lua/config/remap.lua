@@ -5,7 +5,7 @@ nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
 -- Listchars toggle
-nnoremap("<leader>pq", "<cmd>set list!<CR>")
+nnoremap("<leader>qq", "<cmd>set list!<CR>")
 
 -- Packer
 nnoremap("<leader>qq", "<cmd>PackerSync<CR>")
