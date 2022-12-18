@@ -17,4 +17,9 @@ require("nvim-tree").setup({
 	},
 	filters = {
 	},
+	actions = {
+		open_file = {
+			resize_window = true,
+		}
+	},
 })

@@ -47,3 +47,7 @@ vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags hidden=true<cr>")
 
 -- Undotree
 vim.keymap.set("n", "<leader>ud", "<cmd>UndotreeToggle<cr>")
+
+-- Git diff view
+vim.keymap.set("n", "<leader>dv", "<cmd>DiffviewOpen<cr>")
+
