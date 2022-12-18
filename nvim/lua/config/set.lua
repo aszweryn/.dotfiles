@@ -11,7 +11,7 @@ set.tabstop = 4
 set.softtabstop = 4
 
 set.scrolloff = 8
-set.signcolumn = 'auto'
+set.signcolumn = 'yes'
 set.isfname:append("@-@")
 
 

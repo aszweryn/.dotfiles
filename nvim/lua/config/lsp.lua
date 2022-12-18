@@ -1,23 +1,14 @@
-local lsp = require('lsp-zero')
+vim.opt.signcolumn = 'yes'
 
+local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-    'gopls',
-    'sumneko_lua',
-    'tsserver',
+  'tsserver',
+  'eslint',
+  'sumneko_lua',
 })
-
-lsp.setup()
 
 lsp.nvim_workspace()
 
-require'lspconfig'.sumneko_lua.setup {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-}
+lsp.setup()

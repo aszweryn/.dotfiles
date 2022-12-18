@@ -18,6 +18,8 @@ vim.keymap.set("n", "<leader>fo", function()
     vim.lsp.buf.format()
 end)
 
+vim.diagnostic.open_float( { border = "rounder" }, {} )
+
 -- Paste over without buffer change
 vim.keymap.set("n", "<leader>p", "\"_dP")
 
