@@ -30,8 +30,7 @@ set.undofile = true
 set.smartindent = true
 set.wrap = false
 
-vim.g.mapleader = " "
-
 set.termguicolors = true
-
 set.laststatus = 3
+
+vim.g.mapleader = " "
