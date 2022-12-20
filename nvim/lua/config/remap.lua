@@ -1,24 +1,22 @@
--- Move highlighted parts of code
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
 -- Ctrl-D and Ctrl-U with centering
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-
--- Hold J in place when moving line below to the current line
-vim.keymap.set("n", "J", "mzJ`z")
 
 -- Search terms in the middle
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Hold J in place when moving line below to the current line
+vim.keymap.set("n", "J", "mzJ`z")
+
+-- Move highlighted parts of code
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 -- Replace every occurence of current word
 vim.keymap.set("n", "<leader>fo", function()
     vim.lsp.buf.format()
 end)
-
-vim.diagnostic.open_float( { border = "rounder" }, {} )
 
 -- Paste over without buffer change
 vim.keymap.set("n", "<leader>p", "\"_dP")
@@ -52,4 +50,3 @@ vim.keymap.set("n", "<leader>ud", "<cmd>UndotreeToggle<cr>")
 
 -- Git diff view
 vim.keymap.set("n", "<leader>dv", "<cmd>DiffviewOpen<cr>")
-
