@@ -68,5 +68,6 @@ return require('packer').startup(function(use)
 	-- Themes
 	use 'folke/tokyonight.nvim'
 	use 'EdenEast/nightfox.nvim'
+	use 'ellisonleao/gruvbox.nvim'
 end)
 
