@@ -1,6 +1,19 @@
+-- Exit all without saving
+vim.keymap.set("n", "<leader>qa", "<cmd>:qa!<CR>")
+--
 -- Ctrl-D and Ctrl-U with centering
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Navigate between splits
+vim.keymap.set("n", "<c-h>", "<C-w>h")
+vim.keymap.set("n", "<c-j>", "<C-w>j")
+vim.keymap.set("n", "<c-k>", "<C-w>k")
+vim.keymap.set("n", "<c-l>", "<C-w>l")
+
+-- Split keybindings
+vim.keymap.set("n", "<leader>sh", "<cmd>split<CR>")
+vim.keymap.set("n", "<leader>sv", "<cmd>vertical split<CR>")
 
 -- Search terms in the middle
 vim.keymap.set("n", "n", "nzzzv")
@@ -50,3 +63,4 @@ vim.keymap.set("n", "<leader>ud", "<cmd>UndotreeToggle<cr>")
 
 -- Git diff view
 vim.keymap.set("n", "<leader>dv", "<cmd>DiffviewOpen<cr>")
+
