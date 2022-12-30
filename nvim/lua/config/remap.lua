@@ -6,10 +6,10 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Navigate between splits
-vim.keymap.set("n", "<c-h>", "<C-w>h")
-vim.keymap.set("n", "<c-j>", "<C-w>j")
-vim.keymap.set("n", "<c-k>", "<C-w>k")
-vim.keymap.set("n", "<c-l>", "<C-w>l")
+vim.keymap.set("n", "<M-h>", "<C-w>h")
+vim.keymap.set("n", "<M-j>", "<C-w>j")
+vim.keymap.set("n", "<M-k>", "<C-w>k")
+vim.keymap.set("n", "<M-l>", "<C-w>l")
 
 -- Split keybindings
 vim.keymap.set("n", "<leader>sh", "<cmd>split<CR>")
