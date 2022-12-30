@@ -1,6 +1,6 @@
 -- Exit all without saving
 vim.keymap.set("n", "<leader>qa", "<cmd>:qa!<CR>")
---
+
 -- Ctrl-D and Ctrl-U with centering
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -42,8 +42,14 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
--- Find and change every occurence of the current word
+-- Find and replace every occurence of the current word
 vim.keymap.set("n", "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Telescope
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>")
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep hidden=true<cr>")
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers hidden=true<cr>")
+vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags hidden=true<cr>")
 
 -- Packer
 vim.keymap.set("n", "<leader>qq", "<cmd>PackerSync<CR>")
@@ -51,12 +57,6 @@ vim.keymap.set("n", "<leader>qq", "<cmd>PackerSync<CR>")
 -- Nvim-tree
 vim.keymap.set("n", "<leader>nf", "<cmd>NvimTreeFocus<CR>")
 vim.keymap.set("n", "<leader>nt", "<cmd>NvimTreeToggle<CR>")
-
--- Telescope
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>")
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep hidden=true<cr>")
-vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers hidden=true<cr>")
-vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags hidden=true<cr>")
 
 -- Undotree
 vim.keymap.set("n", "<leader>ud", "<cmd>UndotreeToggle<cr>")
