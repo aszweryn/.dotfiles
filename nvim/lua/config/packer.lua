@@ -53,6 +53,12 @@ return require('packer').startup(function(use)
 		requires = 'nvim-lua/plenary.nvim'
 	}
 
+	-- Autopairs
+	use {
+		"windwp/nvim-autopairs",
+		config = function() require("nvim-autopairs").setup {} end
+	}
+
 	-- Changes history undo tree
 	use 'mbbill/undotree'
 
@@ -64,6 +70,11 @@ return require('packer').startup(function(use)
 
 	-- Listchars, indentation helper
 	use 'lukas-reineke/indent-blankline.nvim'
+
+	-- Legend of commands, functions, etc.
+	use({
+		'mrjones2014/legendary.nvim'
+	})
 
 	-- Themes
 	use 'folke/tokyonight.nvim'
