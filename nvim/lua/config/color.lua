@@ -53,8 +53,6 @@ require('nightfox').setup({
 	groups = {},
 })
 
--- setup must be called before loading the colorscheme
--- Default options:
 require("gruvbox").setup({
 	undercurl = true,
 	underline = true,
@@ -73,4 +71,5 @@ require("gruvbox").setup({
 	transparent_mode = false,
 })
 
-vim.cmd("colorscheme gruvbox")
+-- Colorscheme must be invoked after defining specific colorcheme configuration
+vim.cmd("colorscheme tokyonight")
