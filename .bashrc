@@ -35,6 +35,7 @@ alias pycharm="~/.local/share/Pycharm/pycharm-edu-2022.2/bin/pycharm.sh &"
 alias obsidian="~/.local/share/Obsidian/Obsidian-0.15.9.AppImage &"
 alias octave="flatpak run org.octave.Octave"
 alias rars="java -jar ~/Downloads/rars_27a7c1f.jar &"
+alias code="flatpak run com.visualstudio.code"
 ###
 
 ### Custom scritps
@@ -43,7 +44,7 @@ source ~/.dotfiles/bluetooth/bt.sh
 ###
 
 ### Golang
-export GOPATH="$HOME/Projects/Go/*"
+export GOPATH="$HOME/Projects/Go/"
 ###
 
 ### Kubernetes autocompletion
