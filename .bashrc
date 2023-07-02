@@ -23,6 +23,8 @@ fi
 
 unset rc
 
+export XDG_CONFIG_HOME=~/.config
+
 ### Custom aliases 
 alias la="ls -A"
 alias ll="ls -ltrAh"
