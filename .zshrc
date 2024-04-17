@@ -1,12 +1,14 @@
 export XDG_CONFIG_HOME=~/.config
 export ZSH="$HOME/.oh-my-zsh"
 
+source $ZSH/oh-my-zsh.sh
+
 ZSH_THEME="robbyrussell"
 plugins=(git)
 
 ### Custom aliases 
 alias la="ls -A"
-alias ll="ls -ltrAh"
+alias ll="ls -lAtrh"
 alias xo="xdg-open"
 alias vi="nvim"; alias vim="nvim"
 alias xc="xclip -selection clipboard"
@@ -41,5 +43,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ###
-
-source $ZSH/oh-my-zsh.sh
