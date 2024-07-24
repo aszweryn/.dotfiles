@@ -2,7 +2,11 @@ export XDG_CONFIG_HOME=~/.config
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
-plugins=(git)
+
+plugins=(
+	git
+	kubectl
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,6 +33,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ###
 
+### Completions
+source <(helm completion zsh)
+
 ### Custom aliases 
 alias la="ls -A"
 alias ll="ls -lAtrh"
@@ -36,5 +43,6 @@ alias xo="xdg-open"
 alias vi="nvim"; alias vim="nvim"
 alias xc="xclip -selection clipboard"
 alias vs="rm ~/.local/share/nvim/swap/*"
+alias k="kubectl"
 ###
 
