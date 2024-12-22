@@ -27,6 +27,11 @@ export GOPATH="$HOME/Projects/Go"
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
+### Rust
+. "$HOME/.cargo/env"
+export PATH="$PATH:$HOME/.cargo/bin"
+
+
 ### NVM for Node and npm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
