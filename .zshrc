@@ -39,6 +39,7 @@ export NVM_DIR="$HOME/.nvm"
 
 ### Completions
 source <(helm completion zsh)
+source <(fzf --zsh)
 
 ### Custom aliases 
 alias la="ls -A"
