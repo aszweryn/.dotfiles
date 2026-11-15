@@ -1,5 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
     "git",
     "clone",
@@ -12,9 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  config = function()
-    require("keymaps")
-  end,
   -- Improved navigation w/ tmux
   { "alexghergh/nvim-tmux-navigation" },
 
@@ -80,7 +77,14 @@ require("lazy").setup({
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-
+    opts = {
+      workspaces = {
+        {
+          name = "notes",
+          path = "~/notes",
+        },
+      },
+    },
   },
 
   -- Distraction-free experience
@@ -206,7 +210,14 @@ require("lazy").setup({
   "ray-x/guihua.lua",
 
   -- Favourite theme
-  { "catppuccin/nvim", as = "catppuccin" },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme("catppuccin")
+    end,
+  },
 
   -- Automatically pair quotes, brackets, etc
   {
@@ -238,60 +249,11 @@ require("lazy").setup({
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
       "rafamadriz/friendly-snippets",
+      "onsails/lspkind.nvim",
     },
     config = function()
-      -- nvim-cmp setup
-      local cmp = require "cmp"
-      local luasnip = require "luasnip"
-
-      -- Load snippets from friendly-snippets
-      require("luasnip.loaders.from_vscode").lazy_load()
-
-      cmp.setup({
-        view = {
-          entries = "native"
-        },
-        snippet = {
-          expand = function(args)
-            luasnip.lsp_expand(args.body)
-          end,
-        },
-        mapping = cmp.mapping.preset.insert {
-          ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-          ["<C-f>"] = cmp.mapping.scroll_docs(4),
-          ["<C-Space>"] = cmp.mapping.complete(),
-          ["<CR>"] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
-          },
-          ["<Tab>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-              cmp.select_next_item()
-            elseif luasnip.expand_or_jumpable() then
-              luasnip.expand_or_jump()
-            else
-              fallback()
-            end
-          end, { "i", "s" }),
-          ["<S-Tab>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-              cmp.select_prev_item()
-            elseif luasnip.jumpable(-1) then
-              luasnip.jump(-1)
-            else
-              fallback()
-            end
-          end, { "i", "s" }),
-        },
-        sources = {
-          { name = "nvim_lsp" },
-          { name = "luasnip" },
-          { name = "path" },
-          { name = "buffer" },
-          { name = "neorg" },
-        },
-      })
-    end
+      require("plugins.cmp")
+    end,
   },
 
   -- Highlight, edit, and navigate code
@@ -323,9 +285,6 @@ require("lazy").setup({
 
   -- Fuzzy Finder (files, lsp, etc)
   { "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
   { "nvim-telescope/telescope-symbols.nvim" },
-
-  -- Listchars, indentation helper
-  { "lukas-reineke/indent-blankline.nvim" },
 })

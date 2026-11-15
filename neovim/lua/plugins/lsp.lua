@@ -1,6 +1,6 @@
 -- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1, float = true }) end)
+vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1, float = true }) end)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
@@ -51,42 +51,52 @@ end
 -- Setup mason so it can manage external tooling
 require('mason').setup()
 
+-- Broadcast nvim-cmp completion capabilities to LSP servers
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+local ok_cmp, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+if ok_cmp then
+  capabilities = vim.tbl_deep_extend('force', capabilities, cmp_nvim_lsp.default_capabilities())
+end
+
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
 local servers = { 'pyright', 'gopls', 'yamlls', 'bashls', 'lua_ls' }
+
+local server_configs = {
+  lua_ls = {
+    settings = {
+      Lua = {
+        runtime = { version = 'LuaJIT' },
+        diagnostics = { globals = { 'vim', 'use' } },
+        workspace = {
+          library = vim.api.nvim_get_runtime_file('', true),
+          checkThirdParty = false,
+        },
+        telemetry = { enable = false },
+      },
+    },
+  },
+}
+
+local function setup_server(server_name)
+  local cfg = vim.tbl_deep_extend('force', {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }, server_configs[server_name] or {})
+
+  if vim.lsp.config then
+    vim.lsp.config(server_name, cfg)
+    vim.lsp.enable(server_name)
+  else
+    require('lspconfig')[server_name].setup(cfg)
+  end
+end
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
   ensure_installed = servers,
   handlers = {
-    function(server_name)
-      require('lspconfig')[server_name].setup {
-        on_attach = on_attach,
-        capabilities = capabilities,
-      }
-    end,
-    ["lua_ls"] = function()
-      require('lspconfig').lua_ls.setup {
-        on_attach = on_attach,
-        capabilities = capabilities,
-        settings = {
-          Lua = {
-            runtime = {
-              version = 'LuaJIT',
-              path = runtime_path,
-            },
-            diagnostics = {
-              globals = { 'vim', 'use' },
-            },
-            workspace = {
-              library = vim.api.nvim_get_runtime_file('', true),
-              checkThirdParty = false,
-            },
-            telemetry = { enable = false },
-          },
-        },
-      }
-    end,
-  }
+    setup_server,
+  },
 }
 

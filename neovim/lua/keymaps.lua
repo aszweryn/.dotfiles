@@ -50,6 +50,3 @@ vim.keymap.set("n", "<leader>ee", "<cmd>GoIfErr<cr>",
 
 -- Create a nice code snippet
 vim.keymap.set("v", "<leader>cs", "<cmd>CodeSnap<CR>")
-
--- Twilight
-nvim.keymap.set("n", "tw", ":Twilight<enter>")

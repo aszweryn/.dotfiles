@@ -17,11 +17,6 @@ require("nvim-treesitter.configs").setup {
 
   highlight = { enable = true },
   indent = { enable = true },
-  pickers = {
-    find_files = {
-      hidden = true,
-    },
-  },
   incremental_selection = {
     enable = true,
     keymaps = {
