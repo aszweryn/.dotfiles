@@ -11,8 +11,9 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 	tmux attach || tmux
 fi
 
-export EDITOR="nvim"
-export SUDOEDIT="nvim"
+export EDITOR="vim"
+export VISUAL="vim"
+export SUDOEDIT="vim"
 
 # Paths & toolchains
 export GOPATH="$HOME/Projects/Go"
@@ -22,7 +23,14 @@ export PATH="$HOME/.local/bin:/usr/local/go/bin:$GOBIN:$PATH"
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+	export PATH="$NVM_DIR/versions/node/$(cat "$NVM_DIR/alias/default" 2>/dev/null)/bin:$PATH" 2>/dev/null
+	nvm() {
+		unset -f nvm node npm npx
+		\. "$NVM_DIR/nvm.sh"
+		nvm "$@"
+	}
+fi
 
 # Completions
 (( $+commands[helm] )) && source <(helm completion zsh)
@@ -33,7 +41,6 @@ alias la="ls -A"
 alias ll="ls -lAtrh"
 alias xo="xdg-open"
 alias vi="nvim"
-alias vim="nvim"
 alias xc="xclip -selection clipboard"
 alias vs="rm ~/.local/share/nvim/swap/*"
 alias k="kubectl"
